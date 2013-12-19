@@ -7,8 +7,8 @@
 Set wsc = WScript.CreateObject("WScript.Shell")
 Set lnk = wsc.CreateShortcut(wsc.SpecialFolders("desktop") & "\Go-Global.LNK")
 
-    lnk.targetpath = "C:\Program Files (x86)\GraphOn\GO-Global\Client\gg-client.exe"
-    lnk.arguments = "-h hosted.logoscms.com -c -u XXXXXXXXX -p XXXXXXXXX"
-    lnk.description = "DB Access"
-    lnk.workingdirectory = "C:\Program Files (x86)\GraphOn\GO-Global\Client" 
+    lnk.targetpath  =       "C:\Program Files (x86)\GraphOn\GO-Global\Client\gg-client.exe"
+    lnk.arguments   =       "-h hosted.logoscms.com -c -u XXXXXXXXX -p XXXXXXXXX"
+    lnk.description =       "DB Access"
+    lnk.workingdirectory =  "C:\Program Files (x86)\GraphOn\GO-Global\Client" 
     lnk.save
