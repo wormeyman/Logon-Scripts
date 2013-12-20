@@ -5,14 +5,14 @@
     'http://oreilly.com/pub/a/windows/2004/04/13/VB_Shortcuts.html
 '
 'Start The Script
-'Dim SetWshNetwork
-'Set WshNetwork = WScript.CreateObject("WScript.Network")
+Dim SetWshNetwork
+Set WshNetwork = WScript.CreateObject("WScript.Network")
 Set wsc = WScript.CreateObject("WScript.Shell")
 Set lnk = wsc.CreateShortcut(wsc.SpecialFolders("desktop") & "\Go-Global.LNK")
 'Commands
-    lnk.targetpath  =       "C:\Program Files (x86)\GraphOn\GO-Global\Client\gg-client.exe"
-    lnk.arguments   =       "-h hosted.logoscms.com -c -u UserName -p Password"
-    lnk.description =       "DB Access"
-    lnk.workingdirectory =  "C:\Program Files (x86)\GraphOn\GO-Global\Client" 
+    lnk.targetpath = "C:\Program Files (x86)\GraphOn\GO-Global\Client\gg-client.exe"
+    lnk.arguments = "-h hosted.logoscms.com -c -u " & WshNetwork.UserName & " -p Password"
+    lnk.description = "DB Access"
+    lnk.workingdirectory = "C:\Program Files (x86)\GraphOn\GO-Global\Client"
     lnk.save
 'End Script
